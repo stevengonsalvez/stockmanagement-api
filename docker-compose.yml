@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  localstack:
+    image: localstack/localstack:1.4.0
+    ports:
+      - "4566:4566"            # LocalStack Gateway
+      - "4510-4559:4510-4559"  # External services
+    environment:
+      - DEBUG=1
+      - SERVICES=dynamodb,lambda,apigateway,iam,sts,s3,logs,ssm,cloudformation
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:4566/health | grep \"running\""]
+      interval: 5s
+      timeout: 5s
+      retries: 10

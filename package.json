@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@aws-cdk/aws-lambda-nodejs": "^1.203.0",
+    "@aws-sdk/client-dynamodb": "^3.840.0",
+    "@aws-sdk/client-lambda": "^3.840.0",
+    "@aws-sdk/lib-dynamodb": "^3.840.0",
+    "@types/jest": "^30.0.0",
+    "axios": "^1.10.0",
+    "jest": "^30.0.4",
+    "ts-jest": "^29.4.0"
+  },
+  "devDependencies": {
+    "aws-cdk": "^2.1020.2",
+    "aws-cdk-local": "^3.0.1",
+    "esbuild": "^0.25.5"
+  },
+  "scripts": {
+    "deploy:local": "cd infrastructure/cdk && cdklocal deploy --require-approval never --force",
+    "bootstrap:local": "cd infrastructure/cdk && cdklocal bootstrap",
+    "describe:local": "cd infrastructure/cdk && cdklocal describe-stack CdkStack"
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "body": "{\"sku\":\"INTEGRATION-TEST-SKU\",\"from\":{\"locationId\":\"WAREHOUSE-A\",\"bucket\":\"ON_HAND\"},\"to\":{\"locationId\":\"WAREHOUSE-B\",\"bucket\":\"IN_TRANSIT\"},\"quantity\":10}"
+}

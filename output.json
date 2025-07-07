@@ -1,0 +1,1 @@
+{"statusCode":500,"body":"{\"message\":\"Error moving stock\",\"error\":\"Source stock not found for SKU INTEGRATION-TEST-SKU at WAREHOUSE-A/ON_HAND\"}"}
