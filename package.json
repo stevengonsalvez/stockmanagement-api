@@ -5,7 +5,7 @@
     "@aws-sdk/client-lambda": "^3.840.0",
     "@aws-sdk/lib-dynamodb": "^3.840.0",
     "@types/jest": "^30.0.0",
-    "axios": "^1.10.0",
+    "axios": "^1.13.5",
     "jest": "^30.0.4",
     "ts-jest": "^29.4.0"
   },
